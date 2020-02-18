@@ -1,14 +1,25 @@
+import { MergeExclusive } from "type-fest"
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * An array of all unicode characters.
+ * @param options Options.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const unicodeChars = require("unicode-chars");
+ *
+ * unicodeChars();
+ * //=> [ ' ', '!', '"', '#', '$', '%', '&',  "'", '(', ... ]
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function unicodeChars(options?: MergeExclusive<{
+	/* Specific categories to include. */
+	categories?: string
+}, {
+	/** Specific categories to exclude. */
+	omitCategories?: string
+}> & {
+	/** The property to extract for each character. */
+	pickedProperty?: string
+}): string[]
 
-export = theModule;
+export = unicodeChars

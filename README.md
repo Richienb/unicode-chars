@@ -1,41 +1,41 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Unicode Chars [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/unicode-chars/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/unicode-chars)
 
-My awesome module.
+An array of all unicode characters.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/unicode-chars.png)](https://npmjs.com/package/unicode-chars)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install unicode-chars
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const unicodeChars = require("unicode-chars");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+unicodeChars();
+//=> [ ' ', '!', '"', '#', '$', '%', '&',  "'", '(', ... ]
 ```
 
 ## API
 
-### theModule(input, options?)
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
+### unicodeChars(options?)
 
 #### options
 
 Type: `object`
 
-##### postfix
+##### categories or omitCategories
+
+Type: `string[]`
+
+Include or omit specific categories.
+
+##### pickedProperty
 
 Type: `string`\
-Default: `rainbows`
+Default: `symbol`
 
-Lorem ipsum.
+The property to extract for each character.

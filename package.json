@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "unicode-chars",
 	"version": "0.0.0",
 	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"repository": "https://github.com/Richienb/unicode-chars.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,20 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"unicode",
+		"characters",
+		"chars",
+		"ascii",
+		"index",
+		"symbol",
+		"emoji"
+	],
+	"dependencies": {
+		"lodash": "^4.17.15",
+		"type-fest": "^0.10.0",
+		"unicode": "^12.1.0"
+	},
 	"devDependencies": {
 		"ava": "^3.3.0",
 		"eslint-config-richienb": "^0.3.0",
